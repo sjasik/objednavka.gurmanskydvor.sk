@@ -21,20 +21,18 @@
 <body>
   <div id="app">
     <v-app id="inspire">
-      <v-parallax class="hero"
-        src="https://cdn.jsdelivr.net/gh/sjasik/objednavka.gurmanskydvor.sk@latest/img/hero-image.jpg">
+      <v-parallax class="hero" src="https://cdn.jsdelivr.net/gh/sjasik/objednavka.gurmanskydvor.sk@latest/img/hero-image.jpg">
         <v-container class="d-flex" style="height: 100%">
           <v-row align-self="start" class="px-3 mt-2" style="position: absolute">
             <v-col cols="auto" class="text-left align-self-top">
-              <v-btn rounded x-small outlined color="white" href="https://www.gurmanskydvor.sk/">
-                <v-icon left>mdi-arrow-left</v-icon>
-                Domov
-              </v-btn>
+              <a href="https://www.gurmanskydvor.sk/">
+                <img src="https://cdn.jsdelivr.net/gh/sjasik/objednavka.gurmanskydvor.sk@latest/img/logo.png" alt="Logo Gurmánsky dvor u Oravca" style="height: 150px;">
+              </a>
             </v-col>
           </v-row>
 
           <v-col cols="12" align-self="end" class="text-left mb-16">
-            <h1 class="mb-4 text-h2 text-lg-h1 font-weight-bold">
+            <h1 :class="$vuetify.breakpoint.xs ? 'mb-4 text-h3 text-lg-h1 font-weight-bold' : 'mb-4 text-h2 text-lg-h1 font-weight-bold'">
               Gurmánsky dvor u Oravca
             </h1>
             <h4 class="text-subtitle-1 mb-2">
@@ -48,11 +46,11 @@
       </v-parallax>
 
       <v-container fluid>
-        <piknik-embeddable restaurant_id="60f56e4a8c74b5ba5380e96d" default_language="sk" primary_color="#9A2D2B"
+        <piknik-embeddable restaurant_id="60f56e4a8c74b5ba5380e96d" default_language="sk" primary_color="#c5ab6b"
           floating_button="true" agreements_url="/podmienky"></piknik-embeddable>
       </v-container>
 
-      <v-footer padless id="more-info" color="#9A2D2B">
+      <v-footer padless id="more-info" color="#c5ab6b">
         <v-container fluid>
           <v-container>
             <v-row no-gutters class="my-4">
@@ -69,8 +67,7 @@
                         rel="noopener">gurmanskydvor.sk</a><br>
                       <a href="mailto:gurmanskydvor@gmail.com"
                         class="text-decoration-none white--text">gurmanskydvor@gmail.com</a><br>
-                      <a href="tel:0905 951 718" class="text-decoration-none white--text">0905 951 718</a><br>
-                      <a href="tel:0951 004 029" class="text-decoration-none white--text">0951 004 029</a>
+                      <a href="tel:+421 905 951 718" class="text-decoration-none white--text">+421 905 951 718</a>
 
                     </p>
                   </v-col>
@@ -151,17 +148,17 @@
     /* Selection */
     ::-moz-selection {
       color: #fff;
-      background: #9A2D2B;
+      background: #c5ab6b;
     }
 
     ::selection {
       color: #fff;
-      background: #9A2D2B;
+      background: #c5ab6b;
     }
 
     /* Hero image */
     .v-parallax .v-parallax__image-container {
-      filter: brightness(0.8) grayscale(0.1);
+      filter: brightness(0.8) grayscale(0.2);
     }
 
     .hero img.logo {
